@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:movie_app/src/movies/movie_model.dart';
+import 'package:movie_app/domain/movies/movie.model.dart';
 
 class MovieRepository {
   const MovieRepository(this.client);

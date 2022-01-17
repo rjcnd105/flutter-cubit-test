@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_app/src/movies/movie_cubit.dart';
-import 'package:movie_app/src/movies/movie_state.dart';
+import 'package:movie_app/domain/movies/movie.cubit.dart';
+import 'package:movie_app/domain/movies/movie.state.dart';
 
 class MoviesPage extends StatefulWidget {
   @override

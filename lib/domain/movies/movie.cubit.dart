@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:movie_app/src/movies/movie_repository.dart';
-import 'package:movie_app/src/movies/movie_state.dart';
+import 'package:movie_app/domain/movies/movie.repository.dart';
+import 'package:movie_app/domain/movies/movie.state.dart';
 
 class MoviesCubit extends Cubit<MoviesState> {
   MoviesCubit({required this.repository}) : super(InitialState()) {

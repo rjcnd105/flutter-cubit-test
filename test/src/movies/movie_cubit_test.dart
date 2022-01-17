@@ -1,11 +1,11 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mocktail/mocktail.dart';
-import 'package:movie_app/src/movies/movie_cubit.dart';
-import 'package:movie_app/src/movies/movie_model.dart';
-import 'package:movie_app/src/movies/movie_repository.dart';
-import 'package:movie_app/src/movies/movie_state.dart';
+import 'package:mocktail/mocktail.dart' as Mocktail;
+import 'package:movie_app/domain/movies/movie.cubit.dart';
+import 'package:movie_app/domain/movies/movie.model.dart';
+import 'package:movie_app/domain/movies/movie.repository.dart';
+import 'package:movie_app/domain/movies/movie.state.dart';
 
-class MockRepository extends Mock implements MovieRepository {}
+class MockRepository extends Mocktail.Mock implements MovieRepository {}
 
 void main() {
   late MockRepository movieRepository;
@@ -18,7 +18,7 @@ void main() {
 
   setUp(() {
     movieRepository = MockRepository();
-    when(() => movieRepository.getMovies()).thenAnswer(
+    Mocktail.when(() => movieRepository.getMovies()).thenAnswer(
       (_) async => movies,
     );
   });
